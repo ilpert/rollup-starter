@@ -1,0 +1,25 @@
+{
+  "name": "rollup-starter-app",
+  "version": "0.0.0",
+  "type": "module",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@types/node": "^20.3.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
+    "rollup": "^3.25.1",
+    "sirv-cli": "^2.0.2"
+  },
+  "dependencies": {
+    "date-fns": "^2.30.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "npm-run-all --parallel start watch",
+    "format": "prettier -w .",
+    "start": "sirv public/ --no-clear --port 3000 --dev"
+  }
+}
